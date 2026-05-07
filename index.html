@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moe Kyaw Aung | Android Developer | Kotlin | Firebase | Jetpack</title>
+  <meta name="description" content="Premium Android Developer portfolio. Specializing in Kotlin, Jetpack, Firebase, REST APIs. Building secure, scalable mobile applications from Myanmar.">
+  <meta name="keywords" content="Android Developer, Kotlin, Firebase, Jetpack, Mobile Developer, Myanmar Developer">
+  <meta name="author" content="Moe Kyaw Aung">
+  
+  <!-- PWA Meta -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#39FF88">
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="style.css" as="style">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Moe Kyaw Aung - Android Developer">
+  <meta property="og:description" content="Building secure, scalable Android applications with Kotlin, Firebase, and modern architecture.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  <meta property="og:url" content="https://Dev-moe-kyawaung.github.io">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/icons/android.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="android-logo">
+        <svg viewBox="0 0 24 24" fill="#39FF88">
+          <path d="M7.82 16l.38 1.5H7a2 2 0 01-2-2v-5.5a2 2 0 012-2h1.9l-.38 1.5h-1.6v5H7.82zM13 14h-2v-1h2v-2h-2V9h2V8h-3v7h3v1z"/>
+          <path d="M17 18H7a2 2 0 01-2-2v-5.5A2 2 0 017 8.5h1.9l-.38 1.5H7a.5.5 0 00-.5.5V16a.5.5 0 00.5.5h1.9l.38 1.5H17a2 2 0 002-2v-5.5a2 2 0 00-2-2h-1.9l.38-1.5H17a2 2 0 012 2V16a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="loader-text">
+        <span class="loading-text">Loading Portfolio</span>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Floating Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="logo">Moe<span class="accent">.</span></span>
+      <span class="role">Android Developer</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle">
+        <span class="dark-icon">🌙</span>
+        <span class="light-icon">☀️</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>Android Developer</span>
+        <span>Tachileik, Myanmar</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="reveal-text">Building</span>
+        <span class="reveal-text">secure,</span>
+        <span class="reveal-text">scalable</span>
+        <span class="accent reveal-text">Android</span>
+        <span class="reveal-text">applications.</span>
+      </h1>
+      <p class="hero-desc">
+        I create reliable mobile apps with <strong>Kotlin</strong>, <strong>Jetpack</strong>, <strong>Firebase</strong>, and modern architecture. Nearly 2 years building practical solutions.
+      </p>
+      
+      <div class="hero-stats" data-animate="counter">
+        <div class="stat-item">
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-label">+ Years Exp</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+        <a href="#contact" class="btn btn-secondary btn-lg">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="phone-container" data-tilt>
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="app-header"></div>
+            <div class="app-content">
+              <div class="app-card active"></div>
+              <div class="app-card"></div>
+              <div class="app-card"></div>
+            </div>
+            <div class="phone-nav"></div>
+          </div>
+        </div>
+        <div class="tech-stack">
+          <img src="assets/icons/kotlin.svg" alt="Kotlin" class="tech-icon">
+          <img src="assets/icons/firebase.svg" alt="Firebase" class="tech-icon">
+          <img src="assets/icons/android.svg" alt="Android" class="tech-icon">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">About Me</span>
+        <h2 class="section-title">Android Developer from Myanmar</h2>
+        <p class="section-desc">Focused on building practical, secure, and user-friendly mobile applications</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio">
+          <p>
+            I'm Moe Kyaw Aung, an Android Developer with nearly 2 years of experience creating reliable mobile applications. I specialize in modern Android development using Kotlin, Jetpack, Firebase, and REST APIs.
+          </p>
+          <p>
+            My focus is on clean architecture, smooth user experiences, performance optimization, secure coding practices, and building scalable applications that solve real problems.
+          </p>
+          <div class="about-links">
+            <a href="mailto:moekyawaung@engineer.com" class="btn btn-primary">Email Me</a>
+            <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" class="btn btn-secondary">LinkedIn</a>
+          </div>
+        </div>
+        <div class="about-info">
+          <div class="info-card">
+            <h3>Quick Info</h3>
+            <div class="info-item">
+              <span>Location:</span>
+              <span>Tachileik, Myanmar</span>
+            </div>
+            <div class="info-item">
+              <span>Experience:</span>
+              <span>2+ Years</span>
+            </div>
+            <div class="info-item">
+              <span>Available:</span>
+              <span>Full-time / Freelance</span>
+            </div>
+            <div class="info-item">
+              <span>Rate:</span>
+              <span>Project-based</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Skills</span>
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-desc">Core technologies and tools I use daily</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>🛠 Mobile Development</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <span>Kotlin</span>
+              <div class="skill-progress" data-width="95"></div>
+            </div>
+            <div class="skill-bar">
+              <span>Android Jetpack</span>
+              <div class="skill-progress" data-width="90"></div>
+            </div>
+            <div class="skill-bar">
+              <span>Firebase</span>
+              <div class="skill-progress" data-width="88"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>🔗 Backend & APIs</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <span>REST APIs</span>
+              <div class="skill-progress" data-width="92"></div>
+            </div>
+            <div class="skill-bar">
+              <span>Node.js</span>
+              <div class="skill-progress" data-width="85"></div>
+            </div>
+            <div class="skill-bar">
+              <span>FastAPI</span>
+              <div class="skill-progress" data-width="82"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>💾 Database</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <span>MongoDB</span>
+              <div class="skill-progress" data-width="88"></div>
+            </div>
+            <div class="skill-bar">
+              <span>PostgreSQL</span>
+              <div class="skill-progress" data-width="85"></div>
+            </div>
+            <div class="skill-bar">
+              <span>Room Database</span>
+              <div class="skill-progress" data-width="90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-desc">Selected projects showcasing Android development skills</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-tilt>
+          <div class="project-header">
+            <div class="project-badge">Full-Stack E-Commerce</div>
+            <img src="assets/images/ecommerce-preview.png" alt="E-Commerce Platform">
+          </div>
+          <div class="project-content">
+            <h3>E-Commerce Platform</h3>
+            <p>Complete e-commerce solution with real-time inventory, payment integration, and scalable backend architecture.</p>
+            <ul>
+              <li>Stripe & PayPal integration</li>
+              <li>Real-time inventory</li>
+              <li>React + Node.js + MongoDB</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/Moe-KyawAung/ecommerce" class="btn btn-primary" target="_blank">View Code</a>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="project-header">
+            <div class="project-badge">AI Analytics</div>
+            <img src="assets/images/analytics-dashboard-preview.png" alt="Analytics Dashboard">
+          </div>
+          <div class="project-content">
+            <h3>AI-Powered Analytics Dashboard</h3>
+            <p>Real-time data visualization platform with ML predictions and automated PDF report generation.</p>
+            <ul>
+              <li>FastAPI backend</li>
+              <li>PostgreSQL + Docker</li>
+              <li>Real-time charts</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/Moe-KyawAung/analytics-dashboard" class="btn btn-primary" target="_blank">View Code</a>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>React</span>
+              <span>Docker</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Experience</span>
+        <h2 class="section-title">Professional Journey</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item" data-animate="slide-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Android Developer</h3>
+            <span class="timeline-date">2023 - Present</span>
+            <p>Developed and maintained Android applications focusing on performance optimization, clean UI, API integration, debugging, and secure coding practices.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-animate="slide-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Freelance Projects</h3>
+            <span class="timeline-date">2020 - 2023</span>
+            <p>Built multiple Android applications and web projects while learning modern development practices and cloud technologies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Contact</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-desc">Open to Android development opportunities and collaboration</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-item">
+            <span>📧 Email</span>
+            <a href="mailto:moekyawaung@engineer.com">moekyawaung@engineer.com</a>
+          </div>
+          <div class="contact-item">
+            <span>📱 Phone</span>
+            <a href="tel:+959889000889">+959 889 000 889</a>
+          </div>
+          <div class="contact-item">
+            <span>💼 LinkedIn</span>
+            <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank">Profile</a>
+          </div>
+          <div class="contact-item">
+            <span>📂 GitHub</span>
+            <a href="https://github.com/Dev-moe-kyawaung" target="_blank">Dev-moe-kyawaung</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo">Moe<span class="accent">.</span></span>
+          <p>Android Developer building modern mobile experiences.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/Dev-moe-kyawaung" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank">LinkedIn</a>
+          <a href="mailto:moekyawaung@engineer.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Moe Kyaw Aung. Built with passion for Android development.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
