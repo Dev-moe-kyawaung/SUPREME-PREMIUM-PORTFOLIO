@@ -1,0 +1,26 @@
+Dev-moe-kyawaung.github.io/
+│
+├── index.html              # Main HTML with premium structure
+├── style.css               # Supreme CSS with animations & effects
+├── script.js               # Advanced JavaScript animations
+├── README.md               # GitHub Pages README
+│
+├── assets/
+│   ├── images/
+│   │   ├── profile.jpg
+│   │   ├── hero-bg.png
+│   │   ├── ecommerce-preview.png
+│   │   └── analytics-dashboard-preview.png
+│   │
+│   ├── icons/
+│   │   ├── android.svg
+│   │   ├── kotlin.svg
+│   │   ├── firebase.svg
+│   │   ├── jetpack.svg
+│   │   └── api.svg
+│   │
+│   └── particles/
+│       └── particles.json  # Particle animation config
+│
+└── fonts/
+    └── Inter-Variable.woff2
